@@ -7,3 +7,4 @@ This Github contains the following:
 * The powerpoint we made on our project
 * The document that we are submiting to ASA
 * All of the images we used in our paper
+* All questions we asked.
