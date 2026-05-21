@@ -1,0 +1,18 @@
+import pandas as pd
+from scipy import stats
+
+
+# Inputting the dataset
+introverts = [11, 3, 4, 1, 4, 7, 3, 2, 3, 4, 10, 1, 1]
+extroverts = [1, 4, 2, 4, 3, 6, 4, 1, 1, 1, 5, 5, 6, 3, 1, 1, 4, 9, 6]
+
+
+# Descriptive Statistics
+print(f"Introverts -> Mean: {pd.Series(introverts).mean():.2f}, SD: {pd.Series(introverts).std():.2f}")
+print(f"Extroverts -> Mean: {pd.Series(extroverts).mean():.2f}, SD: {pd.Series(extroverts).std():.2f}")
+
+
+# Two-Sample T-Test
+t_stat, p_val = stats.ttest_ind(introverts, extroverts, equal_var=False)
+print(f"T-statistic: {t_stat:.3f}")
+print(f"P-value: {p_val:.3f}")
